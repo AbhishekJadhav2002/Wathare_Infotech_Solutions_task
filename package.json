@@ -1,0 +1,48 @@
+{
+  "name": "wathare_infotech_solutions_task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "env-cmd -f .env nodemon index.js",
+    "prod": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbhishekJadhav2002/Wathare_Infotech_Solutions_task.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "Internship",
+    "MongoDB",
+    "CRUD",
+    "Express.js"
+  ],
+  "author": "AbhishekJadhav2002",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbhishekJadhav2002/Wathare_Infotech_Solutions_task/issues"
+  },
+  "homepage": "https://github.com/AbhishekJadhav2002/Wathare_Infotech_Solutions_task#readme",
+  "dependencies": {
+    "connect-mongo": "^5.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-compression": "^1.0.2",
+    "express-rate-limit": "^6.7.0",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.15.0",
+    "helmet": "^6.0.1",
+    "jsonwebtoken": "^9.0.0",
+    "moment": "^2.29.4",
+    "mongoose": "^7.0.3",
+    "mongoose-aggregate-paginate-v2": "^1.0.6"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "nodemon": "^2.0.22"
+  }
+}
