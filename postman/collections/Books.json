@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "d7d93567-b8ee-4b0a-92ee-ce946c6055f6",
+		"name": "Books",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "20772277-d7d93567-b8ee-4b0a-92ee-ce946c6055f6"
+	},
+	"item": [
+		{
+			"name": "/books?deleted",
+			"id": "481afead-5f7b-42ab-ad52-339329dbc539",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/books?deleted=yes&group=false&limit=6&page=1&date=2023-04-01&sort_order=desc&q=God",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "deleted",
+							"value": "yes",
+							"description": "To get deleted books or not"
+						},
+						{
+							"key": "group",
+							"value": "false",
+							"description": "Group by date (createdAt)"
+						},
+						{
+							"key": "limit",
+							"value": "6",
+							"description": "Number of documents in one page"
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"description": "Page Number"
+						},
+						{
+							"key": "date",
+							"value": "2023-04-01",
+							"description": "To get book created at upto this date"
+						},
+						{
+							"key": "sort_order",
+							"value": "desc",
+							"description": "To get books in descending order according to createdAt date"
+						},
+						{
+							"key": "q",
+							"value": "God",
+							"description": "To get book with search query string in title, description, author of the book"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/book",
+			"id": "2f8ab658-4de9-4e7e-891d-d874979616f0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Read me\",\r\n    \"author\": [\"AI Computer\"],\r\n    \"description\": \"description about book\",\r\n    \"publishedDate\": \"2023-03-30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/book",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/book",
+			"id": "8d46e8e7-3a6a-400b-bddc-eb83805eb1cd",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/book/64276bfae116cd341e64d2c3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"book",
+						"64276bfae116cd341e64d2c3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/book",
+			"id": "7852def9-c0a7-46a4-a67f-53dab8a45a9b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Title with subtitle\",\r\n    \"author\": [\"Author Three\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/book/64276bfae116cd341e64d2c3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"book",
+						"64276bfae116cd341e64d2c3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/book",
+			"id": "5ae91222-3bd8-4cda-a918-25ca545a6db3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/book/64276bfae116cd341e64d2c3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"book",
+						"64276bfae116cd341e64d2c3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

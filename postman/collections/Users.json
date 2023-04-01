@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "517da02d-fd8b-4bc0-bc49-9bee919e6779",
+		"name": "Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "20772277-517da02d-fd8b-4bc0-bc49-9bee919e6779"
+	},
+	"item": [
+		{
+			"name": "/users",
+			"id": "d0293e15-ce08-4179-bd87-e647a068dad2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/users?deleted",
+			"id": "3e27d5ed-4486-458d-ab6c-8410d8068927",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user",
+			"id": "48f10414-8a97-4aad-96c1-7d3d34a7ad2f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Test User\",\r\n    \"email\": \"test3@gmail.com\",\r\n    \"password\": \"Pass@123\",\r\n    \"permissionLevel\": 2,\r\n    \"avatar\": \"https://www.google.com/url?sa=i&url=https%3A%2F%2Ficonduck.com%2Ficons%2F9971%2Fuser-avatar&psig=AOvVaw3P_8ueVMyavZS68WvZyGlx&ust=1680176118689000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCIjKn_iFgf4CFQAAAAAdAAAAABAE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user",
+			"id": "b0c77241-117f-4a22-b807-ac011fe7f192",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user/642758c3091cfe3dbf52a87d",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"642758c3091cfe3dbf52a87d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user",
+			"id": "de957711-bfea-4a1d-906d-1731b14f6a84",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Test Name\",\r\n    \"permissionLevel\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user/642758c3091cfe3dbf52a87d",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"642758c3091cfe3dbf52a87d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user",
+			"id": "8ac10065-c6db-4e92-a80d-5d915beb2a3c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user/642758c3091cfe3dbf52a87d",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"642758c3091cfe3dbf52a87d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
