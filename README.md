@@ -20,3 +20,6 @@ npm ci
 ```bash
 npm start
 ```
+
+> ### Note
+> The API is deployed on [Render](https://wathare-infotech-solutions-task.onrender.com). You can access and test the API through Postman, by accepting the [invite](https://app.getpostman.com/join-team?invite_code=026fac0a80d54e4dd05e19ce618c7862&target_code=37ccabf020a2bec18fe04fd934c5d6da).
