@@ -9,17 +9,14 @@ import validator from './validator.mjs';
 
 function defaultMiddlewares(server) {
     server.use([
-        apiRateLimiter,
-        cors({
-            origin: process.env.NODE_ENV === 'development' ?? true,
-            preflightContinue: true,
-        }),
-        helmet(),
+        // apiRateLimiter,
+        cors(),
         express.json({
             limit: '100kb'
         }),
-        sessionStore(),
-        compression(),
+        // helmet(),
+        // sessionStore(),
+        // compression(),
     ])
 
     return server

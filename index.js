@@ -1,8 +1,8 @@
 import mongoose from 'mongoose';
 import server from './config/server.mjs';
 
-server.listen(process.env.PORT || '3000', '0.0.0.0', () => {
-  console.log('Server listening on port ', process.env.PORT || '3000')
+server.listen(process.env.PORT || '4000', '0.0.0.0', () => {
+  console.log('Server listening on port ', process.env.PORT || '4000')
 })
 
 process.on('uncaughtException', async err => {

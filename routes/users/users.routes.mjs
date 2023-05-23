@@ -8,7 +8,7 @@ const userRouter = Router()
 
 function usersRoutes() {
     userRouter.route('/')
-        .post(insertUserValidations(), validator, createUser)
+        .post(createUser)
 
     usersRouter.route('/')
         .get(getUsers)
