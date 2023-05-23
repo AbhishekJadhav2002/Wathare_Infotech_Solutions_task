@@ -11,7 +11,7 @@ function defaultMiddlewares(server) {
     server.use([
         apiRateLimiter,
         cors({
-            origin: process.env.NODE_ENV === 'development' ?? '',
+            origin: process.env.NODE_ENV === 'development' ?? true,
             preflightContinue: true,
         }),
         helmet(),
