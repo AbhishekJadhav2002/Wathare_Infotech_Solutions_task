@@ -10,10 +10,10 @@ function usersRoutes() {
     userRouter.route('/')
         .post(insertUserValidations(), validator, createUser)
 
-    userRouter.use(auth)
     usersRouter.route('/')
         .get(getUsers)
 
+    userRouter.use(auth)
     userRouter.route('/:_id')
         .all(idParamValidations(), validator)
         .get(getUser)
