@@ -7,11 +7,11 @@ async function createUser(req, res, next) {
         const { name, email, password } = req.body
         const user = await User.findOne({ email })
         if (user && user.deletedAt) {
-            await User.updateOne({ _id: user._id }, { $set: { name, password, 2, 'https://avatars.githubusercontent.com/u/79781388', deletedAt: null } })
+            await User.updateOne({ _id: user._id }, { $set: { name, password, permissionLevel: 2, avatar: 'https://avatars.githubusercontent.com/u/79781388', deletedAt: null } })
         } else if (user && user.deletedAt === null) {
             throw new AppError(400, 'User already exists')
         } else {
-            await User.create({ name, email, password, 2, 'https://avatars.githubusercontent.com/u/79781388' })
+            await User.create({ name, email, password, permissionLevel: 2, avatar: 'https://avatars.githubusercontent.com/u/79781388' })
         }
         return res.status(201).end()
     } catch (error) { next(error) }
